@@ -5,11 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/greet")
+@RequestMapping("/api")
 public class GreetingController {
 
-    @GetMapping
+    @GetMapping("/greet")
     public String greet() {
         return "Hello, World!";
+    }
+
+    @GetMapping
+    public String defaultEndpoint() {
+        return "Welcome to the API!";
     }
 }
